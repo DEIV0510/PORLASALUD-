@@ -166,6 +166,16 @@
   $('#teamRoles').innerHTML = roles.map(r =>
     `<div class="team__role">${svg(r.ic)}<span>${r.t}</span></div>`).join('');
 
+  /* ================= RENDER: SPECIALTIES (branded icons del logo) ================= */
+  const specialties = [
+    ['doctor','Consulta médica'], ['iv','Atención domiciliaria'], ['ambulance','Ambulancias'],
+    ['air','Ambulancia aérea'], ['pediatric','Pediatría'], ['elderly','Adulto mayor'],
+    ['police','Transporte especial'], ['dental','Odontología'], ['vet','Veterinaria'],
+  ];
+  const sg = $('#specialtiesGrid');
+  if (sg) sg.innerHTML = specialties.map(([ic, label]) =>
+    `<div class="specialty"><img src="assets/icons/${ic}.webp" alt="${label}" loading="lazy"><span>${label}</span></div>`).join('');
+
   /* ================= RENDER: COVERAGE ================= */
   const pinsBox = $('#mapPins'), routesSvg = $('#mapRoutes'), citiesBox = $('#coverageCities');
   const hub = cities.find(c => c.hub);
