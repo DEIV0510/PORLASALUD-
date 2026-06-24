@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0A3D91" />
+<title>IPS PORLASALUD · Al cuidado de la familia | Salud domiciliaria y traslados asistenciales</title>
+<meta name="description" content="IPS PORLASALUD — empresa de salud a nivel nacional. Salud domiciliaria, traslados asistenciales básicos y medicalizados, ambulancia aérea, pediatría, fisioterapia y nutrición. Atención 24/7, al cuidado de la familia." />
+<meta name="keywords" content="IPS PORLASALUD, salud domiciliaria, ambulancia, traslados asistenciales, ambulancia aérea, atención médica domiciliaria, Colombia, pediatría, fisioterapia" />
+<meta name="author" content="IPS PORLASALUD" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="IPS PORLASALUD · Al cuidado de la familia" />
+<meta property="og:description" content="Servicios integrales de salud: atención domiciliaria, traslados asistenciales básicos y medicalizados, ambulancia aérea, pediatría, fisioterapia y nutrición. Atención 24/7 a nivel nacional." />
+<meta property="og:image" content="assets/img/hero-ambulance.webp" />
+<meta property="og:locale" content="es_CO" />
+
+<link rel="icon" type="image/png" href="assets/logo/favicon.png" />
+<link rel="apple-touch-icon" href="assets/logo/favicon.png" />
+
+<!-- Preconnect / Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "IPS PORLASALUD",
+  "slogan": "Al cuidado de la familia",
+  "description": "Empresa de salud dedicada al cuidado integral de las personas: atención médica domiciliaria, traslados asistenciales terrestres y aéreos, pediatría, fisioterapia y nutrición.",
+  "image": "assets/img/hero-ambulance.webp",
+  "telephone": ["+573161776021", "+573017212765"],
+  "email": "transportepormedellin@gmail.com",
+  "address": { "@type": "PostalAddress", "streetAddress": "Calle 22D #45-39", "addressCountry": "CO" },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "areaServed": "Colombia",
+  "medicalSpecialty": ["Emergency", "Pediatric", "Physiotherapy", "PrimaryCare"]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader__particles" id="loaderParticles"></div>
+  <div class="loader__inner">
+    <div class="loader__badge">
+      <img src="assets/logo/badge.webp" alt="IPS PORLASALUD" width="150" height="150" />
+      <span class="loader__ring"></span>
+    </div>
+    <svg class="loader__pulse" viewBox="0 0 240 60" preserveAspectRatio="none" aria-hidden="true">
+      <path class="loader__pulse-bg" d="M0 30 H70 L84 30 L92 12 L104 48 L114 30 L126 30 L134 22 L142 38 L150 30 H240" />
+      <path class="loader__pulse-line" d="M0 30 H70 L84 30 L92 12 L104 48 L114 30 L126 30 L134 22 L142 38 L150 30 H240" />
+    </svg>
+    <div class="loader__bar"><span class="loader__bar-fill" id="loaderBar"></span></div>
+    <p class="loader__text">Al cuidado de la familia</p>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#inicio" class="brand" aria-label="IPS PORLASALUD inicio">
+      <img class="brand__mark" src="assets/logo/mark.webp" alt="IPS PORLASALUD" width="50" height="50" />
+      <span class="brand__word"><span>IPS <b>PORLASALUD</b></span><i>Al cuidado de la familia</i></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#inicio" class="nav__link">Inicio</a>
+      <a href="#nosotros" class="nav__link">Nosotros</a>
+      <a href="#servicios" class="nav__link">Servicios</a>
+      <a href="#porque" class="nav__link">¿Por qué?</a>
+      <a href="#cobertura" class="nav__link">Cobertura</a>
+      <a href="#galeria" class="nav__link">Galería</a>
+      <a href="#contacto" class="nav__link">Contacto</a>
+    </nav>
+
+    <div class="header__cta">
+      <a href="tel:+573161776021" class="btn btn--ghost btn--sm header__phone">
+        <svg viewBox="0 0 24 24" class="ic"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1Z"/></svg>
+        <span>316 177 6021</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero__media">
+    <img src="assets/img/hero-ambulance.webp" alt="Ambulancia terrestre y aérea de IPS PORLASALUD" class="hero__img" />
+    <div class="hero__overlay"></div>
+    <div class="hero__grid"></div>
+  </div>
+
+  <div class="container hero__content">
+    <span class="badge-pill" data-sr-hero>
+      <span class="dot"></span> Servicio 24 / 7 · 365 días · Cobertura nacional
+    </span>
+    <h1 class="hero__title" data-sr-hero>
+      IPS <span class="text-grad">PORLASALUD</span>
+    </h1>
+    <p class="hero__slogan" data-sr-hero>Al cuidado de la familia</p>
+    <p class="hero__lead" data-sr-hero>
+      Brindamos servicios integrales de salud: atención domiciliaria, pediatría, fisioterapia,
+      nutrición y traslados asistenciales básicos y medicalizados, terrestres y aéreos,
+      con un equipo humano dispuesto a responder en el menor tiempo posible.
+    </p>
+    <div class="hero__actions" data-sr-hero>
+      <a href="https://wa.me/573161776021?text=Hola,%20deseo%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20IPS%20PORLASALUD." target="_blank" rel="noopener" class="btn btn--gold">
+        <svg viewBox="0 0 24 24" class="ic"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 9.5c.2 2 1.8 4 3.8 4.4.7.1 1.4-.3 1.7-.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Solicitar atención
+      </a>
+      <a href="tel:+573161776021" class="btn btn--light">
+        <svg viewBox="0 0 24 24" class="ic"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1Z"/></svg>
+        Llamar ahora
+      </a>
+    </div>
+    <div class="hero__phones" data-sr-hero>
+      <a href="tel:+573161776021" class="hero__phone"><strong>316 177 6021</strong><span>Línea principal</span></a>
+      <span class="hero__phone-sep"></span>
+      <a href="tel:+573017212765" class="hero__phone"><strong>301 721 2765</strong><span>Línea alterna</span></a>
+    </div>
+  </div>
+
+  <a href="#trust" class="hero__scroll" aria-label="Desplazarse"><span></span></a>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust" id="trust">
+  <div class="container">
+    <div class="trust__track">
+      <div class="trust__item"><svg viewBox="0 0 24 24" class="ic"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Habilitado · Min. Salud</div>
+      <div class="trust__item"><svg viewBox="0 0 24 24" class="ic"><path d="M2 12h20M12 2c3 3 3 17 0 20M12 2C9 5 9 19 12 22" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg> Cobertura nacional</div>
+      <div class="trust__item"><svg viewBox="0 0 24 24" class="ic"><path d="M3 16 9 8l4 5 3-4 5 7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> Aeronáutica Civil</div>
+      <div class="trust__item"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Atención 24/7/365</div>
+      <div class="trust__item"><svg viewBox="0 0 24 24" class="ic"><path d="M12 21s-7-4.4-9.3-9C1 8.5 3 5 6.5 5 9 5 10.5 6.8 12 8c1.5-1.2 3-3 5.5-3C21 5 23 8.5 21.3 12 19 16.6 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg> Atención humanizada</div>
+      <div class="trust__item"><svg viewBox="0 0 24 24" class="ic"><path d="M4 17V9l8-5 8 5v8M4 17h16M9 21v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> Flota terrestre y aérea</div>
+      <!-- duplicate for seamless marquee -->
+      <div class="trust__item" aria-hidden="true"><svg viewBox="0 0 24 24" class="ic"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Habilitado · Min. Salud</div>
+      <div class="trust__item" aria-hidden="true"><svg viewBox="0 0 24 24" class="ic"><path d="M2 12h20M12 2c3 3 3 17 0 20M12 2C9 5 9 19 12 22" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg> Cobertura nacional</div>
+      <div class="trust__item" aria-hidden="true"><svg viewBox="0 0 24 24" class="ic"><path d="M3 16 9 8l4 5 3-4 5 7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> Aeronáutica Civil</div>
+      <div class="trust__item" aria-hidden="true"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Atención 24/7/365</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUIÉNES SOMOS ============ -->
+<section class="section about" id="nosotros">
+  <div class="container about__grid">
+    <div class="about__media" data-aos="fade-right">
+      <div class="about__img-frame">
+        <img src="assets/img/doctor.webp" alt="Profesional médica de IPS PORLASALUD" />
+      </div>
+      <div class="about__badge glass">
+        <img src="assets/logo/badge.webp" alt="" width="56" height="56" />
+        <div><strong>Grupo Empresarial</strong><span>PORLASALUD</span></div>
+      </div>
+    </div>
+
+    <div class="about__body" data-aos="fade-left">
+      <span class="eyebrow"><i></i> Quiénes somos</span>
+      <h2 class="section__title">Una empresa de salud <span class="text-navy">al servicio de la vida</span></h2>
+      <p class="lead">
+        IPS PORLASALUD es una empresa de salud dedicada al cuidado integral de las personas.
+        Ofrecemos traslados médicos y atención médica eficaz de alta calidad, con un equipo
+        interdisciplinario con la capacidad de dar respuesta a cualquier tipo de emergencia
+        en el menor tiempo posible, a nivel nacional.
+      </p>
+
+      <div class="mvo">
+        <article class="mvo__card glass" data-aos="zoom-in" data-aos-delay="50">
+          <span class="mvo__icon"><svg viewBox="0 0 24 24" class="ic"><path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+          <h3>Misión</h3>
+          <p>Suministrar servicios con altos niveles de calidad y eficiencia en las áreas de salud, cuidando y salvando vidas, garantizando un servicio excelente en salud domiciliaria y transporte asistencial.</p>
+        </article>
+        <article class="mvo__card glass" data-aos="zoom-in" data-aos-delay="120">
+          <span class="mvo__icon"><svg viewBox="0 0 24 24" class="ic"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>
+          <h3>Visión</h3>
+          <p>Ser referente de calidad y eficiencia en la prestación de servicios de salud a nivel nacional, destacándonos como la mejor opción en traslados asistenciales y atención domiciliaria.</p>
+        </article>
+        <article class="mvo__card glass" data-aos="zoom-in" data-aos-delay="190">
+          <span class="mvo__icon"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg></span>
+          <h3>Objetivos</h3>
+          <p>Ser un aliado en la prestación de servicios de salud, tanto para las instituciones como para las personas, destacándonos por nuestra capacidad, cobertura y rapidez.</p>
+        </article>
+      </div>
+
+      <div class="values">
+        <h4 class="values__title">Valores corporativos</h4>
+        <ul class="values__list">
+          <li><svg viewBox="0 0 24 24" class="ic"><path d="m5 12 5 5L20 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Compromiso y vocación</li>
+          <li><svg viewBox="0 0 24 24" class="ic"><path d="m5 12 5 5L20 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Calidad en nuestra atención</li>
+          <li><svg viewBox="0 0 24 24" class="ic"><path d="m5 12 5 5L20 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Respeto a nuestros usuarios</li>
+          <li><svg viewBox="0 0 24 24" class="ic"><path d="m5 12 5 5L20 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Eficacia garantizada con equipo calificado</li>
+          <li><svg viewBox="0 0 24 24" class="ic"><path d="m5 12 5 5L20 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Mejora continua y capacitación</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="section services" id="servicios">
+  <div class="container">
+    <div class="section__head" data-aos="fade-up">
+      <span class="eyebrow eyebrow--center"><i></i> Nuestros servicios <i></i></span>
+      <h2 class="section__title section__title--center">Cobertura integral en salud,<br><span class="text-navy">terrestre y aérea</span></h2>
+      <p class="section__sub">Contamos con una gran red de empresas aliadas que garantizan servicios ágiles, seguros y eficientes, además de una amplia flota de ambulancias terrestres y aéreas a nivel nacional.</p>
+    </div>
+
+    <div class="services__feature glass" data-aos="zoom-in">
+      <img src="assets/logo/badge.webp" alt="Servicios de IPS PORLASALUD alrededor del logo" class="services__badge" />
+      <div class="services__feature-txt">
+        <h3>Un grupo empresarial, <span class="text-gold">múltiples especialidades</span></h3>
+        <p>Desde la atención médica en casa hasta los traslados aeromédicos de alta complejidad, integramos todo el ciclo de cuidado de tu familia en una sola IPS.</p>
+        <div class="services__feature-tags">
+          <span>Domiciliaria</span><span>Ambulancias</span><span>Aéreo</span><span>Pediatría</span><span>Fisioterapia</span><span>Nutrición</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="services__grid" id="servicesGrid">
+      <!-- cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ POR QUÉ ELEGIRNOS (STATS) ============ -->
+<section class="section why" id="porque">
+  <div class="why__bg"></div>
+  <div class="container">
+    <div class="section__head section__head--light" data-aos="fade-up">
+      <span class="eyebrow eyebrow--center eyebrow--light"><i></i> ¿Por qué elegirnos? <i></i></span>
+      <h2 class="section__title section__title--center text-white">Respaldo, experiencia y calidez humana</h2>
+    </div>
+
+    <div class="stats">
+      <div class="stat" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat__num"><span class="count" data-target="24">0</span><b>/</b><span class="count" data-target="7">0</span></div>
+        <p>Atención permanente</p>
+      </div>
+      <div class="stat" data-aos="fade-up" data-aos-delay="80">
+        <div class="stat__num"><span class="count" data-target="365">0</span></div>
+        <p>Días al año</p>
+      </div>
+      <div class="stat" data-aos="fade-up" data-aos-delay="160">
+        <div class="stat__num"><span class="count" data-target="100">0</span><b>%</b></div>
+        <p>Compromiso</p>
+      </div>
+      <div class="stat" data-aos="fade-up" data-aos-delay="240">
+        <div class="stat__num"><b>+</b><span class="count" data-target="30">0</span></div>
+        <p>Ciudades con cobertura</p>
+      </div>
+    </div>
+
+    <div class="why__cards">
+      <article class="why__card glass-dark" data-aos="fade-up" data-aos-delay="0">
+        <span class="why__ic"><svg viewBox="0 0 24 24" class="ic"><path d="M3 12h4l2 5 4-12 2 7h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Respuesta oportuna</h3>
+        <p>Coordinación inmediata de ambulancias y personal médico para responder cuando más se necesita.</p>
+      </article>
+      <article class="why__card glass-dark" data-aos="fade-up" data-aos-delay="100">
+        <span class="why__ic"><svg viewBox="0 0 24 24" class="ic"><path d="M12 21s-7-4.4-9.3-9C1 8.5 3 5 6.5 5 9 5 10.5 6.8 12 8c1.5-1.2 3-3 5.5-3C21 5 23 8.5 21.3 12 19 16.6 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>
+        <h3>Atención humanizada</h3>
+        <p>Tratamos a cada paciente como parte de nuestra familia, con respeto, calidez y dignidad.</p>
+      </article>
+      <article class="why__card glass-dark" data-aos="fade-up" data-aos-delay="200">
+        <span class="why__ic"><svg viewBox="0 0 24 24" class="ic"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 13.4V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>Personal calificado</h3>
+        <p>Equipo interdisciplinario capacitado bajo los estándares del Ministerio de Salud y Aeronáutica Civil.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COBERTURA ============ -->
+<section class="section coverage" id="cobertura">
+  <div class="container coverage__grid">
+    <div class="coverage__info" data-aos="fade-right">
+      <span class="eyebrow"><i></i> Cobertura</span>
+      <h2 class="section__title">Presencia <span class="text-navy">a nivel nacional</span></h2>
+      <p class="lead">Coordinamos atención domiciliaria y traslados asistenciales terrestres y aéreos
+        conectando las principales ciudades de Colombia, con infraestructura y aliados estratégicos.</p>
+
+      <ul class="coverage__legend">
+        <li><span class="lg lg--home"></span> Atención domiciliaria</li>
+        <li><span class="lg lg--ground"></span> Traslados terrestres</li>
+        <li><span class="lg lg--air"></span> Traslados aéreos</li>
+      </ul>
+
+      <div class="coverage__cities" id="coverageCities"></div>
+
+      <a href="https://wa.me/573161776021?text=Hola,%20quiero%20saber%20si%20cubren%20mi%20ciudad." target="_blank" rel="noopener" class="btn btn--navy">¿Cubrimos tu ciudad? Escríbenos</a>
+    </div>
+
+    <div class="coverage__map" data-aos="fade-left">
+      <div class="map-stage" id="mapStage">
+        <div class="map-shape"></div>
+        <svg class="map-routes" viewBox="0 0 100 100" preserveAspectRatio="none" id="mapRoutes" aria-hidden="true"></svg>
+        <div class="map-pins" id="mapPins"></div>
+        <div class="map-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="section gallery" id="galeria">
+  <div class="container">
+    <div class="section__head" data-aos="fade-up">
+      <span class="eyebrow eyebrow--center"><i></i> Galería <i></i></span>
+      <h2 class="section__title section__title--center">Nuestra <span class="text-navy">flota y equipo</span> en acción</h2>
+    </div>
+    <div class="gallery__grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="section testi" id="testimonios">
+  <div class="container">
+    <div class="section__head" data-aos="fade-up">
+      <span class="eyebrow eyebrow--center"><i></i> Testimonios <i></i></span>
+      <h2 class="section__title section__title--center">Familias que <span class="text-navy">confían en nosotros</span></h2>
+    </div>
+    <div class="testi__grid" id="testiGrid"></div>
+  </div>
+</section>
+
+<!-- ============ EQUIPO ============ -->
+<section class="section team" id="equipo">
+  <div class="container team__grid">
+    <div class="team__media" data-aos="fade-right">
+      <img src="assets/img/team.webp" alt="Equipo profesional de IPS PORLASALUD" />
+      <div class="team__chip glass">
+        <span class="team__chip-num">7+</span>
+        <span class="team__chip-txt">áreas de talento humano</span>
+      </div>
+    </div>
+    <div class="team__body" data-aos="fade-left">
+      <span class="eyebrow"><i></i> Nuestro equipo</span>
+      <h2 class="section__title">Talento humano <span class="text-navy">multidisciplinario</span></h2>
+      <p class="lead">Contamos con profesionales en el área de la salud, logística y transporte:
+        médicos, enfermeras, paramédicos, pilotos, conductores, técnicos y personal administrativo,
+        capacitados según los estándares de calidad del Ministerio de Salud y Aeronáutica Civil de Colombia.</p>
+      <div class="team__roles" id="teamRoles"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section contact" id="contacto">
+  <div class="container contact__grid">
+    <div class="contact__info" data-aos="fade-right">
+      <span class="eyebrow"><i></i> Contacto</span>
+      <h2 class="section__title">Estamos listos para <span class="text-navy">atender a tu familia</span></h2>
+      <p class="lead">Comunícate con nosotros las 24 horas del día. Te orientamos y coordinamos la atención que necesitas.</p>
+
+      <ul class="contact__list">
+        <li>
+          <span class="contact__ic"><svg viewBox="0 0 24 24" class="ic"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1Z"/></svg></span>
+          <div><span class="contact__label">Teléfonos</span>
+            <a href="tel:+573161776021">316 177 6021</a> · <a href="tel:+573017212765">301 721 2765</a></div>
+        </li>
+        <li>
+          <span class="contact__ic"><svg viewBox="0 0 24 24" class="ic"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>
+          <div><span class="contact__label">Dirección</span><a href="https://www.google.com/maps/search/?api=1&query=Calle+22D+%2345-39" target="_blank" rel="noopener">Calle 22D #45-39</a></div>
+        </li>
+        <li>
+          <span class="contact__ic"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>
+          <div><span class="contact__label">Correo electrónico</span><a href="mailto:transportepormedellin@gmail.com">transportepormedellin@gmail.com</a></div>
+        </li>
+      </ul>
+
+      <div class="contact__actions">
+        <a href="tel:+573161776021" class="btn btn--navy"><svg viewBox="0 0 24 24" class="ic"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1Z"/></svg> Llamar</a>
+        <a href="https://wa.me/573161776021?text=Hola,%20deseo%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20IPS%20PORLASALUD." target="_blank" rel="noopener" class="btn btn--wa"><svg viewBox="0 0 24 24" class="ic"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg> WhatsApp</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Calle+22D+%2345-39" target="_blank" rel="noopener" class="btn btn--ghost btn--ghost-navy"><svg viewBox="0 0 24 24" class="ic"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/></svg> Google Maps</a>
+      </div>
+    </div>
+
+    <div class="contact__form-wrap" data-aos="fade-left">
+      <form class="contact__form glass" id="contactForm" novalidate>
+        <h3>Solicita una atención</h3>
+        <p class="contact__form-sub">Déjanos tus datos y te contactamos de inmediato.</p>
+        <div class="field">
+          <label for="cf-name">Nombre completo</label>
+          <input id="cf-name" name="name" type="text" required placeholder="Tu nombre" autocomplete="name" />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="cf-phone">Teléfono</label>
+            <input id="cf-phone" name="phone" type="tel" required placeholder="300 000 0000" autocomplete="tel" inputmode="tel" />
+          </div>
+          <div class="field">
+            <label for="cf-service">Servicio</label>
+            <select id="cf-service" name="service">
+              <option>Salud domiciliaria</option>
+              <option>Traslado asistencial básico</option>
+              <option>Traslado medicalizado</option>
+              <option>Ambulancia aérea</option>
+              <option>Pediatría</option>
+              <option>Fisioterapia</option>
+              <option>Nutrición</option>
+              <option>Atención al adulto mayor</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="cf-msg">Mensaje</label>
+          <textarea id="cf-msg" name="msg" rows="3" placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--block">Enviar solicitud por WhatsApp</button>
+        <p class="contact__form-note">Al enviar serás redirigido a WhatsApp con tu solicitud lista.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta-band">
+  <div class="container cta-band__inner" data-aos="zoom-in">
+    <div>
+      <h2>¿Necesitas atención ahora?</h2>
+      <p>Nuestra línea está disponible las 24 horas, los 365 días del año.</p>
+    </div>
+    <div class="cta-band__btns">
+      <a href="tel:+573161776021" class="btn btn--light">Llamar 316 177 6021</a>
+      <a href="https://wa.me/573161776021?text=Hola,%20deseo%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20IPS%20PORLASALUD." target="_blank" rel="noopener" class="btn btn--gold">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="assets/logo/badge.webp" alt="IPS PORLASALUD" class="footer__logo" />
+      <p class="footer__slogan">Al cuidado de la familia</p>
+      <p class="footer__desc">Empresa de salud dedicada al cuidado integral de las personas: atención domiciliaria y traslados asistenciales terrestres y aéreos a nivel nacional.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" class="ic"><path d="M14 9h3V6h-3c-2 0-3 1.3-3 3v2H8v3h3v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5Z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" class="ic"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a>
+        <a href="https://wa.me/573161776021" aria-label="WhatsApp"><svg viewBox="0 0 24 24" class="ic"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Servicios</h4>
+      <a href="#servicios">Salud domiciliaria</a>
+      <a href="#servicios">Traslados básicos</a>
+      <a href="#servicios">Traslados medicalizados</a>
+      <a href="#servicios">Ambulancia aérea</a>
+      <a href="#servicios">Pediatría y fisioterapia</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Compañía</h4>
+      <a href="#nosotros">Quiénes somos</a>
+      <a href="#porque">¿Por qué elegirnos?</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#galeria">Galería</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <a href="tel:+573161776021">316 177 6021</a>
+      <a href="tel:+573017212765">301 721 2765</a>
+      <a href="mailto:transportepormedellin@gmail.com">transportepormedellin@gmail.com</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Calle+22D+%2345-39" target="_blank" rel="noopener">Calle 22D #45-39</a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p>© <span id="year"></span> IPS PORLASALUD. Todos los derechos reservados.</p>
+      <p class="footer__legal"><a href="#">Aviso de privacidad</a> · <a href="#">Tratamiento de datos</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP + TOP ============ -->
+<a href="https://wa.me/573161776021?text=Hola,%20deseo%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20IPS%20PORLASALUD." target="_blank" rel="noopener" class="wa-float" id="waFloat" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3Z" fill="#fff"/><path d="M22.5 18.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-1.9-.9-3.1-1.7-4.4-3.8-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.6-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9 0 1.7 1.2 3.3 1.4 3.6.2.2 2.4 3.7 5.9 5.1 2.2.9 3 1 4.1.9.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.6-.4Z" fill="#25D366"/></svg>
+  <span class="wa-float__pulse"></span>
+</a>
+<button class="to-top" id="toTop" aria-label="Volver arriba"><svg viewBox="0 0 24 24" class="ic"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lbClose" aria-label="Cerrar">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Anterior">&#10094;</button>
+  <img src="" alt="" id="lbImg" />
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Siguiente">&#10095;</button>
+</div>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
