@@ -73,21 +73,21 @@
 
   /* ================= DATA ================= */
   const services = [
-    { t:'Salud Domiciliaria', img:'svc-domiciliaria', ic:'home',
+    { t:'Salud Domiciliaria', img:'svc-domiciliaria', ic:'home', bic:'doctor',
       d:'Visita médica, urgencias a domicilio, administración de medicamentos, inyectología, nebulizaciones, electrocardiograma, glucometría e inmovilización con vendajes.' },
-    { t:'Traslados Asistenciales Básicos', img:'svc-basico', ic:'ambulance',
+    { t:'Traslados Asistenciales Básicos', img:'svc-basico', ic:'ambulance', bic:'ambulance',
       d:'Movilización segura de pacientes y neonatos de baja complejidad (TAB) con equipos médicos certificados y personal capacitado.' },
-    { t:'Traslados Medicalizados', img:'svc-medicalizado', ic:'pulse',
+    { t:'Traslados Medicalizados', img:'svc-medicalizado', ic:'pulse', bic:'iv',
       d:'Ambulancias de alta complejidad (TAM) equipadas con personal especializado para el transporte de pacientes en estado crítico.' },
-    { t:'Ambulancia Aérea', img:'svc-aerea', ic:'plane',
+    { t:'Ambulancia Aérea', img:'svc-aerea', ic:'plane', bic:'air',
       d:'Traslados aeromédicos nacionales con profesionales y aeronaves de alta experiencia, según los protocolos del Min. de Salud y Aeronáutica Civil.' },
-    { t:'Pediatría', img:'svc-pediatria', ic:'baby',
+    { t:'Pediatría', img:'svc-pediatria', ic:'baby', bic:'pediatric',
       d:'Atención médica especializada y cercana para el cuidado y bienestar de los más pequeños de la casa.' },
-    { t:'Fisioterapia', img:'svc-fisio', ic:'physio',
+    { t:'Fisioterapia', img:'svc-fisio', ic:'physio', bic:'physio',
       d:'Recuperación física y rehabilitación con acompañamiento profesional, en el sitio que el paciente necesite.' },
-    { t:'Nutrición', img:null, ic:'nutrition',
+    { t:'Nutrición', img:null, ic:'nutrition', bic:'nutrition',
       d:'Evaluación y acompañamiento nutricional personalizado para promover hábitos saludables en toda la familia.' },
-    { t:'Atención al Adulto Mayor', img:'svc-adultomayor', ic:'elder',
+    { t:'Atención al Adulto Mayor', img:'svc-adultomayor', ic:'elder', bic:'elderly',
       d:'Seguimiento integral y cuidado especializado, con calidez y respeto, para nuestros adultos mayores.' },
   ];
 
@@ -127,7 +127,7 @@
 
   /* ================= RENDER: SERVICES ================= */
   $('#servicesGrid').innerHTML = services.map(s => {
-    const badge = `<span class="svc-card__icon">${svg(s.ic)}</span>`;
+    const badge = `<img class="svc-card__icon" src="assets/icons/${s.bic}.webp" alt="" loading="lazy" width="58" height="58">`;
     const media = s.img
       ? `<div class="svc-card__media"><img src="assets/img/${s.img}.webp" alt="${s.t}" loading="lazy">${badge}</div>`
       : `<div class="svc-card__media svc-card__media--brand"><span class="brand-mark">${svg(s.ic)}</span>${badge}</div>`;
