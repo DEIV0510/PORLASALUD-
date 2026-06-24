@@ -91,17 +91,6 @@
       d:'Seguimiento integral y cuidado especializado, con calidez y respeto, para nuestros adultos mayores.' },
   ];
 
-  const gallery = [
-    { src:'hero-ambulance', cap:'Ambulancia terrestre', cls:'g-wide' },
-    { src:'svc-aerea',      cap:'Ambulancia aérea',     cls:'g-tall' },
-    { src:'gal-night',      cap:'Operación nocturna 24/7', cls:'' },
-    { src:'gal-planeamb',   cap:'Logística aeromédica', cls:'' },
-    { src:'team',           cap:'Equipo profesional',   cls:'g-wide' },
-    { src:'svc-medicalizado', cap:'Traslado medicalizado', cls:'' },
-    { src:'gal-cars',       cap:'Flota de apoyo',       cls:'' },
-    { src:'care-warm',      cap:'Atención humanizada',  cls:'' },
-  ];
-
   const testimonials = [
     { n:'María Fernanda Gómez', r:'Familiar de paciente', img:'avatar-nurse', s:5,
       x:'La ambulancia llegó rapidísimo y el personal fue muy humano con mi papá. Nos sentimos acompañados en todo momento.' },
@@ -141,14 +130,6 @@
       </div>
     </article>`;
   }).join('');
-
-  /* ================= RENDER: GALLERY ================= */
-  $('#galleryGrid').innerHTML = gallery.map((g, i) =>
-    `<figure class="gallery__item ${g.cls}" data-i="${i}" data-aos="zoom-in">
-      <img src="assets/img/${g.src}.webp" alt="${g.cap}" loading="lazy">
-      <span class="gallery__item-zoom">${svg('arrow').replace('class="ic"','class="ic" style="transform:rotate(-45deg)"')}</span>
-      <figcaption class="gallery__item-cap">${g.cap}</figcaption>
-    </figure>`).join('');
 
   /* ================= RENDER: TESTIMONIALS ================= */
   $('#testiGrid').innerHTML = testimonials.map(t =>
@@ -193,29 +174,6 @@
 
   /* ================= YEAR ================= */
   $('#year').textContent = new Date().getFullYear();
-
-  /* ================= LIGHTBOX ================= */
-  (function lightbox() {
-    const lb = $('#lightbox'), img = $('#lbImg');
-    let idx = 0;
-    const items = gallery;
-    const show = i => { idx = (i + items.length) % items.length; img.src = `assets/img/${items[idx].src}.webp`; img.alt = items[idx].cap; };
-    const open = i => { show(i); lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; };
-    const close = () => { lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); document.body.style.overflow=''; };
-    document.addEventListener('click', e => {
-      const fig = e.target.closest('.gallery__item'); if (fig) open(+fig.dataset.i);
-    });
-    $('#lbClose').addEventListener('click', close);
-    $('#lbNext').addEventListener('click', () => show(idx + 1));
-    $('#lbPrev').addEventListener('click', () => show(idx - 1));
-    lb.addEventListener('click', e => { if (e.target === lb) close(); });
-    addEventListener('keydown', e => {
-      if (!lb.classList.contains('open')) return;
-      if (e.key === 'Escape') close();
-      if (e.key === 'ArrowRight') show(idx + 1);
-      if (e.key === 'ArrowLeft') show(idx - 1);
-    });
-  })();
 
   /* ================= CONTACT FORM -> WHATSAPP ================= */
   $('#contactForm').addEventListener('submit', e => {
@@ -277,7 +235,7 @@
   const spy = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { links.forEach(l => l.classList.remove('active')); map[e.target.id] && map[e.target.id].classList.add('active'); } });
   }, { rootMargin: '-45% 0px -50% 0px' });
-  ['inicio','nosotros','servicios','porque','cobertura','galeria','contacto'].forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
+  ['inicio','nosotros','servicios','porque','cobertura','contacto'].forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
 
   /* ================= MAGNETIC BUTTONS ================= */
   if (!reduce && matchMedia('(hover:hover)').matches) {
