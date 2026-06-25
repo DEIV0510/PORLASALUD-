@@ -208,6 +208,39 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.12;col
 .trust__item .ic{color:var(--gold)}
 
 /* =================================================================
+   PROMISE / FOUNDERS
+   ================================================================= */
+.promise{overflow:hidden;background:#fff}
+.promise__bg{position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(55% 80% at 88% 15%,rgba(29,161,242,.09),transparent 70%),
+             radial-gradient(50% 70% at 6% 95%,rgba(212,175,55,.11),transparent 70%)}
+.promise__grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.promise__media{position:relative}
+.promise__frame{position:relative;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-lg);border:6px solid #fff;background:var(--blue-100);z-index:2}
+.promise__frame::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(160deg,transparent 62%,rgba(10,61,145,.16))}
+.promise__frame img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.promise__accent{position:absolute;width:64%;height:64%;border-radius:26px;
+  background:var(--grad-gold);opacity:.18;right:-22px;bottom:-22px;z-index:1;filter:blur(4px)}
+.promise__badge{position:absolute;left:-16px;top:28px;z-index:3;display:flex;align-items:center;gap:.65rem;
+  padding:.7rem 1rem;border-radius:16px}
+.promise__badge-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;
+  background:var(--grad-navy);color:#fff;flex:none}
+.promise__badge-ic .ic{width:1.4em;height:1.4em}
+.promise__badge strong{display:block;font-family:var(--font-display);color:var(--navy-900);font-size:.9rem;line-height:1.1}
+.promise__badge span{font-size:.74rem;color:var(--muted)}
+.promise__body{position:relative}
+.promise__quote{font-size:clamp(1.7rem,3.6vw,2.9rem);line-height:1.22;margin-top:.9rem;position:relative}
+.promise__quote-mark{position:absolute;left:-.45em;top:-.4em;font-family:var(--font-display);
+  font-weight:800;font-size:3.4em;color:var(--blue-100);z-index:-1;line-height:1}
+.promise__lead{font-size:1.08rem;color:var(--text);margin-top:1.3rem;max-width:54ch}
+.promise__sign{display:flex;align-items:center;gap:.8rem;margin-top:1.6rem}
+.promise__sign-line{width:42px;height:2px;background:var(--gold);border-radius:2px;flex:none}
+.promise__sign-txt{font-family:var(--font-display);color:var(--navy-900);font-size:.98rem}
+.promise__actions{margin-top:1.9rem}
+
+/* =================================================================
    ABOUT
    ================================================================= */
 .about{background:linear-gradient(180deg,#fff,var(--gray))}
@@ -519,8 +552,11 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.12;col
   .nav__link::after{display:none}
   .nav-toggle{display:flex}
   .header__phone{display:none}
-  .about__grid,.coverage__grid,.team__grid,.contact__grid{grid-template-columns:1fr}
+  .about__grid,.coverage__grid,.team__grid,.contact__grid,.promise__grid{grid-template-columns:1fr}
   .about__media{max-width:460px;margin-inline:auto}
+  .promise__media{max-width:440px;margin-inline:auto}
+  .promise__body{text-align:center}
+  .promise__sign{justify-content:center}
   .team__media{order:-1}
   .mvo{grid-template-columns:1fr}
   .services__grid{grid-template-columns:repeat(2,1fr)}
@@ -550,6 +586,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.12;col
   .stats{gap:.7rem}
   .stat{padding:1.2rem .6rem}
   .about__badge{right:8px}
+  .promise__badge{left:6px;top:10px}
+  .promise__quote-mark{display:none}
   .brand__word i{display:none}
   .brand__word>span{font-size:.96rem}
   .brand__mark{height:42px;width:42px}
