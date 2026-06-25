@@ -85,7 +85,7 @@
       d:'Atención médica especializada y cercana para el cuidado y bienestar de los más pequeños de la casa.' },
     { t:'Fisioterapia', img:'svc-fisio', ic:'physio', bic:'physio',
       d:'Recuperación física y rehabilitación con acompañamiento profesional, en el sitio que el paciente necesite.' },
-    { t:'Nutrición', img:null, ic:'nutrition', bic:'nutrition',
+    { t:'Nutrición', img:'svc-nutricion', ic:'nutrition', bic:'nutrition',
       d:'Evaluación y acompañamiento nutricional personalizado para promover hábitos saludables en toda la familia.' },
     { t:'Atención al Adulto Mayor', img:'svc-adultomayor', ic:'elder', bic:'elderly',
       d:'Seguimiento integral y cuidado especializado, con calidez y respeto, para nuestros adultos mayores.' },
