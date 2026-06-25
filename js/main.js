@@ -108,10 +108,10 @@
   ];
 
   const cities = [
-    { n:'Barranquilla', x:37, y:14 }, { n:'Medellín', x:39, y:35 },
-    { n:'Bucaramanga', x:53, y:31 }, { n:'Bogotá', x:53, y:46, hub:true },
-    { n:'Pereira', x:38, y:46 }, { n:'Cali', x:34, y:57 },
-    { n:'Pasto', x:33, y:70 }, { n:'Villavicencio', x:59, y:49 }, { n:'Leticia', x:60, y:89 },
+    { n:'Medellín', x:39, y:35, hub:true },
+    { n:'Quibdó', x:30, y:40 },
+    { n:'Bogotá', x:53, y:46 },
+    { n:'Cali', x:34, y:57 },
   ];
 
   /* ================= RENDER: SERVICES ================= */
@@ -163,9 +163,8 @@
   pinsBox.innerHTML = cities.map(c =>
     `<div class="map-pin ${c.hub ? 'map-pin--hub' : ''}" style="left:${c.x}%;top:${c.y}%"><i></i><b></b><span>${c.n}</span></div>`).join('');
   citiesBox.innerHTML = cities.map(c => `<span>${c.n}</span>`).join('');
-  // routes hub -> selected cities
-  const targets = ['Barranquilla','Medellín','Cali','Bucaramanga','Leticia','Pasto'];
-  routesSvg.innerHTML = cities.filter(c => targets.includes(c.n)).map(c => {
+  // routes from hub (Medellín) to the other service cities
+  routesSvg.innerHTML = cities.filter(c => !c.hub).map(c => {
     const mx = (hub.x + c.x) / 2, my = (hub.y + c.y) / 2;
     const dx = c.x - hub.x, dy = c.y - hub.y;
     const cx = mx - dy * 0.18, cy = my + dx * 0.18;
