@@ -165,7 +165,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.12;col
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;
   padding:9rem 0 4rem;overflow:hidden}
 .hero__media{position:absolute;inset:0;z-index:-2}
-.hero__img{width:100%;height:100%;object-fit:cover;object-position:center 30%;
+.hero__img{width:100%;height:100%;object-fit:cover;object-position:center 56%;
   transform:scale(1.08);will-change:transform}
 .hero__overlay{position:absolute;inset:0;
   background:linear-gradient(100deg,rgba(4,36,79,.95) 0%,rgba(7,44,107,.86) 42%,rgba(10,61,145,.6) 70%,rgba(29,161,242,.32) 100%)}
