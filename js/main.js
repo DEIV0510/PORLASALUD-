@@ -138,7 +138,6 @@
       <div class="testi__stars">${svg('star').repeat(t.s)}</div>
       <p class="testi__text">${t.x}</p>
       <div class="testi__author">
-        <img src="assets/img/${t.img}.webp" alt="${t.n}" loading="lazy">
         <div><strong>${t.n}</strong><span>${t.r}</span></div>
       </div>
     </article>`).join('');
